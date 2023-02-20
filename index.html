@@ -1,76 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>timer</title>
-	<style>
-		.container {
-			height: 100px;
-			border: 2px solid black;
-            background-color: aquamarine;
-            border-radius: 10px;
-			margin: 10px 0;
-			text-align: center;
-			vertical-align: middle;
-			line-height: 100px;
-			position: relative;
-			box-sizing: content-box;
-			padding: 0 3px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-wrap: wrap;
-			flex: 1;
-		}
+	<head>
+		<meta charset="utf-8">
+		<link href="style.css" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+		<script src="script.js"></script>
+	</head>
 
-		.close-btn {
-			position: absolute;
-			bottom: 35px;
-			right: 10px;
-			cursor: pointer;
-		}
+	<body>
+		<div class="header">
+			<h1> t i c t a c </h1>
+		</div>
 
-		#container-list {
-			display: flex;
-			flex-direction: column;
-			flex-wrap: wrap;
-			margin-bottom: 40px;
-		}
-
-		#add-container-btn {
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			margin: 10px;
-		}
-	</style>
-</head>
-<body>
-	<h1>timer</h1>
-
-	<div id="container-list">
-		<!-- This is where the rectangles will be added -->
-	</div>
-
-	<button id="add-container-btn" onclick="addContainer()">Add Container</button>
-
-	<script>
-		function addContainer() {
-			var containerList = document.getElementById("container-list");
-			var container = document.createElement("div");
-			container.className = "container";
-			container.textContent = "Container " + (containerList.childElementCount + 1);
-
-			var closeBtn = document.createElement("span");
-			closeBtn.className = "close-btn";
-			closeBtn.innerHTML = "&times;";
-			closeBtn.addEventListener("click", function() {
-				containerList.removeChild(container);
-			});
-
-			container.appendChild(closeBtn);
-			containerList.appendChild(container);
-		}
-	</script>
-</body>
+		<div id="timer-list">
+		</div>
+		
+		<div class="button-container">
+			<button class="round-button" onclick="addTimer()"><span>+</span></button>
+		</div>
+	</body>
+		
 </html>

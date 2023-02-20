@@ -1,0 +1,64 @@
+:root {
+    --bg-color: rgb(15, 15, 15);
+}
+
+body {
+    background-color: var(--bg-color);
+    height: 100vh;
+    margin: 0px;
+    /* overflow: hidden; */
+    justify-content: center;
+    padding: 0px;
+    font-family: 'Assistant', sans-serif;
+}
+
+.header {
+    font-family: 'Assistant', sans-serif;
+    padding: 1px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: #1F1F1F;
+    color: white;
+    /* font-size: 15px; */
+}
+
+.button-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.round-button {
+    border-radius: 50%; /* make the button round */
+    width: 70px;
+    height: 70px;
+    background-color: #7209b7; /* set the background color */
+    color: white; /* set the text color */
+    font-size: 40px; /* set the font size */
+    border: none; /* remove the button border */
+    cursor: pointer; /* add cursor pointer on hover */
+}
+  
+.round-button span {
+    display: block; /* display the "+" label as a block element */
+    text-align: center; /* center the "+" label horizontally */
+    font-family: 'Assistant', sans-serif;
+}
+  
+.timer-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.timer {
+    height: 100px;
+    background-color: #A7ACD9;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+}

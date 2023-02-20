@@ -1,48 +1,20 @@
-
-
-
-
-// const input = document.getElementById('input');
-// const startButton = document.getElementById('start');
-// const stopButton = document.getElementById('stop');
-// const timeLeftDisplay = document.getElementById('time-left');
-// let countdown;
-
-// function timer(seconds) {
-//   clearInterval(countdown);
-
-//   const now = Date.now();
-//   const then = now + seconds * 1000;
-
-//   displayTimeLeft(seconds);
-
-//   countdown = setInterval(() => {
-//     const secondsLeft = Math.round((then - Date.now()) / 1000);
-
-//     if (secondsLeft < 0) {
-//       clearInterval(countdown);
-//       return;
-//     }
-
-//     displayTimeLeft(secondsLeft);
-//   }, 1000);
-// }
-
-// function displayTimeLeft(seconds) {
-//   const minutes = Math.floor(seconds / 60);
-//   const remainderSeconds = seconds % 60;
-//   const display = `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
-//   document.title = display;
-//   timeLeftDisplay.textContent = display;
-// }
-
-// startButton.addEventListener('click', () => {
-//   const seconds = input.value;
-//   timer(seconds);
-// });
-
-// stopButton.addEventListener('click', () => {
-//   clearInterval(countdown);
-//   document.title = 'Custom Timer';
-//   timeLeftDisplay.textContent = '';
-// });
+function addTimer() {
+    var timerList = document.getElementById("timer-list");
+    var timer = document.createElement("div");
+    timer.className = "timer";
+    
+    // Set initial width to 0 and position to center
+    timer.style.width = "0";
+    timer.style.left = "50%";
+    timer.style.transition = "all 200ms ease-out";
+    
+    setTimeout(() => {
+      var pageWidth = document.documentElement.clientWidth;
+      timer.style.width = (pageWidth - 20) + "px";
+      timer.style.left = (pageWidth - 10) + "px";
+      timer.style.transform = "none";
+    }, 0);
+    
+    timerList.appendChild(timer);
+  }
+  
